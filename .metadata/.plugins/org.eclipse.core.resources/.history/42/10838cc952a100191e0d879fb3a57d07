@@ -1,0 +1,8 @@
+package com.cogzy.model;
+
+public class Shape {
+
+
+	double PI = 3.14156;
+	void printArea();
+}

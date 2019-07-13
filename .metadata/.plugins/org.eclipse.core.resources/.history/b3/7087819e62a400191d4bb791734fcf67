@@ -1,0 +1,25 @@
+package com.cogzy.programs;
+
+import com.cogzy.utils.DoublyLinkedList;
+
+public class P02_LinkedListDemo {
+
+	public static void main(String[] args) {
+
+		DoublyLinkedList<Integer> nums = new DoublyLinkedList<Integer>();
+
+		nums.addAtStart(20);
+		System.out.println(nums);
+		nums.addAtStart(50);
+		System.out.println(nums);
+		nums.addAtStart(35);
+		System.out.println(nums);
+		nums.addAtEnd(70);
+		System.out.println(nums);
+
+		int index = 1;
+		Integer n = nums.deleteAtIndex(index);
+		System.out.printf("Element at given index %d is %d is deleted\n", index, n);
+		System.out.println(nums);
+	}
+}

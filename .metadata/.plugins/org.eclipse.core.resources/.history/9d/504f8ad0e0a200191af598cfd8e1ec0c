@@ -1,0 +1,131 @@
+package com.cogzy.utils;
+
+public class SinglyLinkedList<T> {
+
+	private Node<T> start, end;
+	private int size;
+
+	public SinglyLinkedList() {
+		start = end = null;
+	}
+
+	// 1. Function to add elements at the start or end position
+
+	public void addAtStart(T data) {
+		Node<T> newNode = new Node<T>(data);
+
+		if (start == null) {
+			start = end = newNode;
+		} else {
+			newNode.next = start;
+			start = newNode;
+		}
+		size++;
+	}
+
+	public void addAtEnd(T data) {
+		Node<T> newNode = new Node<T>(data);
+
+		if (start == null) {
+			start = end = newNode;
+		} else {
+			end.next = newNode;
+			end = newNode;
+		}
+		size++;
+	}
+	
+	
+	//2. Function to insert a element at a given index
+	
+	public void addAtIndex(T data, int index)
+	{
+		if(index<0 || index >= size)
+		{
+			throw new IndexOutOfBoundsException("Invalid Index");
+		}
+		if(index==0)
+		{
+			this.addAtStart(data);
+			return;
+		}
+		if(index == size - 1 )
+		{
+			this.addAtEnd(data);
+			return;
+		}
+		
+		Node<T> newNode = new Node<T>(data);
+		Node<T> temp = start;
+		for(int i=1; i<index; i++)
+		{
+			temp =temp.next;
+		}
+		newNode.next = temp.next;
+		temp.next = newNode;
+		size++;
+		
+	}
+	
+	
+	// 3. Function to get the number of elements
+	public int size()
+	{
+		
+		return this.size;
+	}
+	
+	
+	// 4. Function to get an element at a given index
+	
+
+      
+	
+
+	@Override
+	public String toString() {
+		String str = "SinglyLinkedList [";
+
+		if (start == null) {
+			str += "]";
+			return str;
+		} else {
+			Node<T> temp = start;
+			while (temp != end) {
+				str += temp.data + ",";
+				temp = temp.next;
+
+			}
+			str += temp.data;
+			str += "]";
+
+			return str;
+		}
+	}
+
+	private class Node<T> {
+		private T data;
+		private Node next;
+
+		public Node(T data) {
+			this.data = data;
+		}
+
+		private T getData() {
+			return data;
+		}
+
+		private void setData(T data) {
+			this.data = data;
+		}
+
+		private Node getNext() {
+			return next;
+		}
+
+		private void setNext(Node next) {
+			this.next = next;
+		}
+
+	}
+}

@@ -1,0 +1,29 @@
+package com.cogzy.programs;
+
+import com.cogzy.utils.SinglyLinkedList;
+
+public class P01_LinkedListDemo {
+
+	public static void main(String[] args) {
+
+		SinglyLinkedList<Integer> nums = new SinglyLinkedList<Integer>();
+		nums.addAtStart(20); 
+		System.out.println(nums);
+		nums.addAtStart(50); 
+		System.out.println(nums);
+		nums.addAtStart(35); 
+		System.out.println(nums);
+		nums.addAtEnd(10); 
+		System.out.println(nums);
+		nums.addAtIndex(44, 0);
+		System.out.println(nums);
+		nums.size();
+		System.out.println(nums);
+
+
+	}
+
+
+	}
+
+

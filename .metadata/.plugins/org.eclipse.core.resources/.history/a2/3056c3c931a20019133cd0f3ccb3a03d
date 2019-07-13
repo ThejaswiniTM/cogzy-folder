@@ -1,0 +1,13 @@
+package com.cogzy.programs;
+
+import com.cogzy.utils.SinglyLinkedList;
+
+public class P01_LinkedListDemo {
+
+	public static void main(String[] args) {
+
+		
+
+	}
+
+}
