@@ -1,6 +1,0 @@
-package com.cogzy.utils;
-
-public class SinglyLinkedList<T> {
-
-	
-}

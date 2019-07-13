@@ -1,5 +1,0 @@
-package com.cogzy.utils;
-
-public class Node<T> {
-
-}
